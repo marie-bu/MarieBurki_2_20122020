@@ -7,7 +7,7 @@
         <title>Reservia, trouvez votre hébergement pour des vacances de rêves</title>
     </head>
 
-    <body>
+    <body> <div id="blocpage">
         
         <header>
             <div id="entête_logo">
@@ -29,10 +29,10 @@
                     <i class="fas fa-map-marker-alt"><input type="search" name="ville" id="rechercher" value="Marseille, France" required/></i>
                     <input type="submit" value="Rechercher" />
                     <p> Filtres
-                        <i class="fas fa-money-bill-wave"><input type="checkbox" name="eco" id="eco" /></i> <label for="eco">Économique</label> </br>
-                        <i class="fas fa-child"><input type="checkbox" name="familial" id="familial" /></i> <label for="familial">Familial</label> </br>
-                        <i class="fas fa-heart"><input type="checkbox" name="romantique" id="romantique" /></i> <label for="romantique">Romantique</label> </br>
-                        <i class="fas fa-dog"><input type="checkbox" name="animaux" id="animaux" /></i> <label for="animaux">Animaux autorisés</label> </br>
+                        <div class="filtre"> <i class="fas fa-money-bill-wave"></i> <input type="checkbox" name="eco" id="eco" /> <label for="eco">Économique</label> </div> </br>
+                        <div class="filtre"> <i class="fas fa-child"></i> <input type="checkbox" name="familial" id="familial" /> <label for="familial">Familial</label> </div> </br>
+                        <div class="filtre"> <i class="fas fa-heart"></i> <input type="checkbox" name="romantique" id="romantique" /> <label for="romantique">Romantique</label> </div> </br>
+                        <div class="filtre"> <i class="fas fa-dog"></i> <input type="checkbox" name="animaux" id="animaux" /> <label for="animaux">Animaux autorisés</label> </div> </br>
                     </p> 
                     <p>
                         <i class="fas fa-info"></i> Plus de 500 logements sont disponibles dans cette ville
@@ -159,5 +159,5 @@
                 </ul>
             </div>
         </footer>
-    </body>
+    </div> </body>
 </html>
