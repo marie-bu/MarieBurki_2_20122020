@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "raleway" ;
+    src: url(Raleway/Raleway-VariableFont_wght.ttf) format(ttf);
+    src: url(Raleway/Raleway-Italic-VariableFont_wght.ttf) format(ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+#blocpage {
+    width : auto ;
+    margin : auto ;
+    background-color: white;
+    font-family: "raleway", Arial, Helvetica, sans-serif ;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+#entête_logo {
+    display: flex ;
+    flex-direction: column;
+}
+
+#entête_logo h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin : 28px 0px 0px 0px ;
+}
+
+#entête_logo h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin : 5px 0 22px 0 ;
+}
+
+#entête_logo img {
+    width: 85px;
+    height: 38px;
+    margin-top : 15px;
+}
+
+nav ul {
+    display :flex ;
+    list-style-type: none;
+}
+
+nav li {
+    margin-right : 38px ;
+    margin-top: 15px;
+}
+
+nav a {
+    font-size: 1em;
+    font-weight: normal ;
+    text-decoration : none;
+    color : black ;
+}
+
+/*essayé avec nav a:last-child : tout les liens nav devenait bleu. Idem avec nav a:last-of-type. Pourquoi? */
+nav #inscription {
+    color : #0065FC ;
+    font-weight: bold;
+}
+
+/*sur la maquette, la ligne border top dépasse le texte, comment la rendre plus longue ? */
+nav a:hover {
+    color : #0065FC ;
+    border-top : 1px solid #0065FC ;
+    padding-top: 28px;
+}
+
