@@ -7,12 +7,13 @@
 }
 
 #blocpage {
-    width : auto ;
+    width : 980px ;
     margin : auto ;
     background-color: white;
     font-family: "raleway", Arial, Helvetica, sans-serif ;
 }
 
+                                    /* header */
 header {
     display: flex;
     justify-content: space-around;
@@ -24,13 +25,13 @@ header {
 }
 
 #entête_logo h1 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     margin : 28px 0px 0px 0px ;
 }
 
 #entête_logo h2 {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: normal;
     margin : 5px 0 22px 0 ;
 }
@@ -71,3 +72,43 @@ nav a:hover {
     padding-top: 28px;
 }
 
+                                    /* footer */
+/*comment étirer le bloc sur toute la page ? il reste quelques pixel à gauche...*/
+footer {
+    display: flex;
+    background-color: #F2F2F2;
+    padding-left : 4%;
+    padding-top : 3%;
+    min-width: 100%;
+}
+
+footer div {
+    margin-right: 10%;
+
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer h3 {
+    font-size: 1.1em;
+    font-weight: bold ;
+    text-decoration : none;
+    color : black ;
+    padding-bottom: 5%;
+}
+
+footer a {
+    font-size: 1em;
+    font-weight: normal ;
+    text-decoration : none;
+    color : black ;
+}
+
+/*pourquoi l'espace entre les li diminue progressivement pour chaque ul?*/
+footer li {
+    padding-bottom: 8%;
+    list-style-position: inside;
+}
