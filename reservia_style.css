@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
 
-#blocpage {
-    width : 1080px ;
-    margin : auto ;
+body {
     background-color: white;
     font-family: 'Raleway', Arial, Helvetica, sans-serif ;
 }
 
+#blocpage {
+    max-width : 1340px ;
+    margin : auto ;
+}
+
+h1 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
 h2, li a, p {
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight : normal;
 }
 
 h3 {
-    font-size : 0.8em ;
+    font-size : 1em ;
     font-weight: bold;
 }
 
@@ -23,7 +31,7 @@ a {
 }
 
 i {
-    font-size : 0.8em ;
+    font-size : 1em ;
     color :#0065FC;
 }
 
@@ -34,50 +42,49 @@ header {
     justify-content: space-between ;
 }
 
-#entête_logo img {
-    width: 75px;
-    height: 30px;
-    margin-top : 4%;
-} /*peut-on aussi régler la taille des images en pourcentage, pour que le logo s'adapte à tous les écrans ?*/
-
-#entête_logo h1 {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin : 6% 0 0 0 ;
+#logo img {
+    width: 110px;
+    height: 42px;
+    margin-top : 40px;
+    margin-left : -10px ;
 }
 
-#entête_logo h2 {
-    margin-top : 1% ; margin-bottom: 2.5% ;
+#logo h1 {
+    margin-top: 40px ;
+}
+
+#logo h2 {
+    margin-top : 10px ; margin-bottom: 20px ;
 }
 
 nav ul {
     display :flex ;
-    list-style-type: none;
+    justify-content: space-between;
+    width : 390px ;
 }
 
 nav li {
-    margin-right : 20% ;
-    margin-top: 5%;
+    margin-top: 35px;
 }
 
 nav li:last-child a {
     color : #0065fc ;
-    font-weight: bold;
-   
-} /*essayé avec nav a:last-child : tout les liens nav devenait bleu. Idem avec nav a:last-of-type. Pourquoi? */
+    font-weight: bold; 
+}
 
 nav a:hover {
     color : #0065FC ;
     border-top : 1px solid #0065FC ;
-    padding-top : 30px;
-} /*sur la maquette, la ligne border top dépasse le texte, comment la rendre plus longue ? */
-
-/*comment recentrer nav, qui part trop à droite*/
+    padding-top: 50px ;
+} /*sur la maquette, la ligne border top dépasse le texte, 
+comment la rendre plus longue ? 
+et comment la fixer au haut de l'écran ? */
 
 
                                                     /*champs de recherche*/
+
 input, label, #contain_filtres p {
-    font-size : 0.8em ;
+    font-size : 1em ;
     font-weight: bold;
 }
 
@@ -86,15 +93,15 @@ i[class="fas fa-map-marker-alt"] {
     color : black ;
     border : 1px #f2f2f2 solid ;
     border-radius: 15px 0 0 15px;
-    padding : 1.15% ;
+    padding : 16px ;
 }
 
 input[type="search"] {
     border : none ;
     border-top: 1px #F2F2F2 solid;
     border-bottom: 1px #F2F2F2 solid;
-    padding : 1% ;
-    width: 15%;
+    padding : 14px ;
+    width: 230px;
 }
 
 input[type="submit"] {
@@ -102,27 +109,31 @@ input[type="submit"] {
     color : white ;
     border : 1px #0065FC solid ;
     border-radius: 0 15px 15px 0;
-    padding : 1% ;
-} /* n'arrive pas à coller tous les éléments ensemble */
+    padding : 14px ;
+} /* n'arrive pas à bien coller tous les éléments ensemble */
 
 #contain_filtres {
     display : flex ;
-    margin-top : 1.8%;
-    margin-bottom: 2.5%;
-}
+    justify-content: space-between;
+    width : 930px ;
+    margin-top : 30px ;
+    margin-bottom: 40px ;
+} /*mauvaises finitions des boutons... ! */
 
 .button_filtre {
     display: inline;
-    margin-left: 3%;
     border : 2px #f2f2f2 solid ;
     border-radius: 20px;
-}
+    padding-right: 20px;
+} /*attention décalage bas de la border, pas présent avant changements... ?*/
 
 .button_filtre i {
+    box-sizing: border-box;
     background-color: #DEEBFF;
-    border : 2px #DEEBFF solid;
+    border : 1px #DEEBFF solid;
     border-radius: 50%;
     padding : 12px;
+    margin-right : 10px ;
 }
 
 .button_filtre:hover {
@@ -137,53 +148,56 @@ input[type="checkbox"] {
 i[class="fas fa-info"] {
     border : 2px #F2F2F2 solid ;
     border-radius: 50%;
-    padding: 0.5% 0.8%;
-    margin-right: 0.5%;
+    padding: 5px 10px;
+    margin-right: 10px;
 }
 
                                     /* section hébergements */
+
 i[class*="star"] {
     color : #0065fc ;
-    font-size: 0.8em;
-} /* comment rapprocher les étoiles? */
-
-#hébergements a, #activités a {
-    text-decoration: none;
-    color : black
+    font-size: 1em;
+    letter-spacing: -2px;
 }
 
-main h1 {
-    font-size: 1.1em;
-    font-weight: bold;
-    padding-bottom: 15px;
-    margin-left : 18px;
+i[class="far fa-star"] {
+    color : gray ;
+} /* pas réussi à les rendre entièrement grises. Essayé avec une class
+à l'intérieur du i, essayé avec un span autours du i. 
+Il y a bien une version grise sur font icon mais payante. */
+
+#hebergements h1, #activites h1 {
+    font-size : 1.1em ;
 }
 
-#hébergements {
-    display: flex;
+#hebergements {
+    display : flex;
     justify-content: space-between;
+    margin-bottom: 40px ;
 }
 
-#hébergements article {
+#hebergements article {
     flex : 3;
-    min-height: 450px ;
+    height: 625px ;
     background-color: #f2f2f2 ;
     border : 1px #f2f2f2 solid;
     border-radius: 10px;
-    padding : 1.3%;
-    margin-right: 3%;
-}
+    padding : 40px ;
+    margin-right: 40px ;
+} /* à 100% sur mon navigateur, les rectangles des hôtels se mettent
+sur deux colones et dépassent le container gris... ! */
 
-#contain_global_heb {
+#container_hebergements {
     display :flex ;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top : 30px ; margin-bottom: 40px ;
 }
 
-.contain_hebergements {
+.container_hotel {
     display: flex;
     position: relative;
-    width : 190px; height: 145px;
+    width : 245px; height: 200px;
     margin-bottom : 30px ;
     background-color: white;
     border : 3px white solid;
@@ -191,43 +205,42 @@ main h1 {
     box-shadow: 1px 1px 7px #c8c8c8;
 }
 
-.contain_hebergements img {
-    width: 99.5% ; height: 65% ;
-    top : 0 ; left : 0 ;
+.container_hotel img {
+    width: 100% ; height: 65% ;
     object-fit: cover;
     border : 3px white solid;
     border-radius: 10px 10px 0 0;
     box-sizing: border-box;
 }
 
-.caption_hebergements {
+.caption_hotel {
     position: absolute;
     bottom : 0 ; left : 0 ;
-    width : 99.5% ; height : 33.5% ;
+    width : 100% ; height : 35% ;
 }
 
-.caption_hebergements h3 {
-    margin : 1% 0% 1.5% 5% ;
+.caption_hotel h3 {
+    font-size : 0.9em ;
+    margin : 5px 0 5px 12px;
 }
 
-.caption_hebergements p {
-    font-size : 0.7em ;
-    margin : 1.5% 0% 0% 5% ;
+.caption_hotel p {
+    font-size : 0.8em ;
+    margin : 0 0 5px 12px ;
 }
 
 #afficher_plus {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: bold;
-    margin-left: 18px;
 }
 
 aside {
     flex : 1.3;
-    min-height: 450px ;
+    height: 625px ;
     background-color: #f2f2f2 ;
     border : 1px #f2f2f2 solid;
     border-radius: 10px;
-    padding : 1.3% ;
+    padding : 40px ;
 }
 
 #title_populaire {
@@ -236,84 +249,83 @@ aside {
     justify-content: space-between;
 }
 
-#contain_global_populaire {
+#container_populaire {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-} /*pourquoi pas au centre du container et pourquoi space-between ne marche pas */
+    height : 510px ;
+}
 
-.contain_populaire {
+.container_hotel_populaire {
     display: flex;
     position: relative;
-    width : 260px; height: 110px;
+    width : 345px; height: 145px;
     background-color: white;
     border : 3px white solid;
     border-radius: 10px;
     box-shadow: 1px 1px 7px #c8c8c8;
 }
 
-.contain_populaire img {
-    width: 36% ; height: 99.5% ;
+.container_hotel_populaire img {
+    width: 40% ; height: 100% ;
     object-fit: cover;
     border : 3px white solid;
     border-radius: 10px 0 0 10px;
     box-sizing: border-box;
 }
 
-.caption {
+.caption_populaire {
     position: absolute;
     top : 0 ; right : 0 ;
-    width : 59% ; height : 99.5% ;
+    width : 60% ; height : 100% ;
 }
 
-.caption h3 {
-    margin : 8% 20% 1% 0 ;
+.caption_populaire h3 {
+    font-size : 0.9em;
+    margin : 15px 45px 12px 15px ;
 }
 
-.caption p {
-    margin : 3% 20% 16% 0 ;
+.caption_populaire p {
+    font-size: 0.8em;
+    margin : 0px 45px 40px 15px ;
 }
 
 i[class="fas fa-chart-line"] {
-    font-size: 1.3em;
+    font-size: 1.4em;
     color : black;
-    padding-top : 5px ; padding-right : 18px;
+    padding-right : 7px;
 }
 
 
                                         /* section activités */
-#activités {
-    height: 450px ;
-    margin-top : 40px ;
+#activites {
+    height: 510px ;
+    margin-bottom : 40px ;
 }
 
-#activités h1 {
-    margin-left : 0px ;
-}
-
-#contain_activités {
+#contain_activites {
     display: flex ;
     justify-content: space-between;
 }  
 
 .row {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    height: 335px;
-} /* mais pourquoi il n'y pas d'espace ? 
-même problème que plus haut, héb populaires... 
-ai essayé en mettant les .row a en display block, sans succès */
+}
 
 .column {
-    flex: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height : 445px ;
+    flex : 25%;
     max-width: 25%;
 }
 
 .xl {
     display: flex;
     position: relative;
-    width : 230px; height: 335px;
+    width : 305px; height: 445px;
     border-radius: 10px;
     box-shadow: 1px 1px 7px #c8c8c8;
 }
@@ -321,7 +333,7 @@ ai essayé en mettant les .row a en display block, sans succès */
 .l {
     display: flex;
     position: relative;
-    width : 230px; height: 175px;
+    width : 305px; height: 240px;
     border-radius: 10px;
     box-shadow: 1px 1px 7px #c8c8c8;
 }
@@ -329,7 +341,7 @@ ai essayé en mettant les .row a en display block, sans succès */
 .m {
     display: flex;
     position: relative;
-    width : 230px; height: 145px;
+    width : 305px; height: 210px;
     border-radius: 10px;
     box-shadow: 1px 1px 7px #c8c8c8;
 }
@@ -337,23 +349,26 @@ ai essayé en mettant les .row a en display block, sans succès */
 .s {
     display: flex;
     position: relative;
-    width : 230px; height: 125px;
+    width : 305px; height: 165px;
     border-radius: 10px;
     box-shadow: 1px 1px 7px #c8c8c8;
 }
 
-#contain_activités img {
+#contain_activites img {
     width: 100% ; height: 85% ;
+    position : absolute ;
     object-fit: cover;
     box-sizing: border-box;
     border-radius: 10px 10px 0 0;
 }
 
-#contain_activités h3 {
+#contain_activites h3 {
     position: absolute;
-    bottom : 0 ; left : 0 ;
-    width : 99.5% ; height : 40px ;
-    margin : 5% 5% 5% 0 ;
+    box-sizing: border-box;
+    bottom : 0 ;
+    width : 100% ; height : 50px ;
+    padding-top : 25px ; padding-left : 20px ;
+    background-color: white;
 }
 
                                     /* footer */
@@ -362,8 +377,9 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #F2F2F2;
-    min-width: 100% ;
-}  /*comment étirer le fond gris sur toute la page ?*/
+    padding: 45px ;
+    padding-right : 365px ;
+}
 
 ul {
     list-style-type: none;
