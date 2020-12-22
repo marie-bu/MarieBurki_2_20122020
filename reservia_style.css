@@ -128,7 +128,6 @@ input[type="submit"] {
 } /*attention décalage bas de la border, pas présent avant changements... ?*/
 
 .button_filtre i {
-    box-sizing: border-box;
     background-color: #DEEBFF;
     border : 1px #DEEBFF solid;
     border-radius: 50%;
