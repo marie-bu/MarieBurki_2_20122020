@@ -10,8 +10,23 @@ body {
     margin : auto ;
 }
 
+@media all and (min-width : 1177px) and (max-width : 1379px) {
+    header, form, #activites {
+        padding : 0 20px ;
+    }
+
+    footer div:first-child {
+        padding-left: 25px;
+    }
+}
+
 h1 {
     font-size: 1.3em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size : 1em ;
     font-weight: bold;
 }
 
@@ -20,9 +35,8 @@ h2, li a, p {
     font-weight : normal;
 }
 
-h3 {
-    font-size : 1em ;
-    font-weight: bold;
+ul {
+    list-style-type: none;
 }
 
 a {
@@ -35,57 +49,68 @@ i {
     color :#0065FC;
 }
 
-                                                     /* header */
+             /* header */
 
-header {
+#mobile_header {
+    display: none;
+}
+                                                    
+#desktop_header_top {
     display: flex;
     justify-content: space-between ;
 }
 
-#logo img {
-    width: 110px;
-    height: 42px;
-    margin-top : 40px;
-    margin-left : -10px ;
+#desktop_header img {
+    width: 110px; height: 42px;
+    margin-top : 20px; margin-left : -10px ;
 }
 
-#logo h1 {
-    margin-top: 40px ;
+#desktop_header h1 {
+    margin-top: 20px ;
 }
 
-#logo h2 {
-    margin-top : 10px ; margin-bottom: 20px ;
+#desktop_header h2 {
+    margin-top : 10px ; margin-bottom: 25px ;
 }
 
 nav ul {
     display :flex ;
     justify-content: space-between;
-    width : 390px ;
+    width: 440px;
 }
 
 nav li {
-    margin-top: 35px;
+    padding : 57px 25px 0px 25px ;
+    margin-top: -23px;
 }
 
-nav li:last-child a {
+nav li:hover {
+    border-top: 1px #0065FC solid;
+}
+
+nav a {
+    transition : 0.2s;
+}
+
+nav a:hover {
+    color: #0065FC;
+    cursor : pointer ;
+}
+
+.inscription {
     color : #0065fc ;
     font-weight: bold; 
 }
 
-nav a:hover {
-    color : #0065FC ;
-    border-top : 1px solid #0065FC ;
-    padding-top: 50px ;
-} /*sur la maquette, la ligne border top dépasse le texte, 
-comment la rendre plus longue ? 
-et comment la fixer au haut de l'écran ? */
-
-
-                                                    /*champs de recherche*/
+           /* form */
 
 input, label, #contain_filtres p {
     font-size : 1em ;
     font-weight: bold;
+}
+
+#contain_recherche {
+    display: flex ;
 }
 
 i[class="fas fa-map-marker-alt"] {
@@ -93,15 +118,21 @@ i[class="fas fa-map-marker-alt"] {
     color : black ;
     border : 1px #f2f2f2 solid ;
     border-radius: 15px 0 0 15px;
-    padding : 16px ;
+    width : 50px ; height : 50px ;
+    text-align: center;
+    line-height: 3em;
 }
 
 input[type="search"] {
     border : none ;
     border-top: 1px #F2F2F2 solid;
     border-bottom: 1px #F2F2F2 solid;
-    padding : 14px ;
     width: 230px;
+    padding-left: 15px;
+}
+
+#icon_search {
+    display : none ;
 }
 
 input[type="submit"] {
@@ -109,8 +140,12 @@ input[type="submit"] {
     color : white ;
     border : 1px #0065FC solid ;
     border-radius: 0 15px 15px 0;
-    padding : 14px ;
-} /* n'arrive pas à bien coller tous les éléments ensemble */
+    padding : 0 15px ;
+} 
+
+input[type="submit"]:hover {
+    cursor : pointer ;
+}
 
 #contain_filtres {
     display : flex ;
@@ -118,30 +153,38 @@ input[type="submit"] {
     width : 930px ;
     margin-top : 30px ;
     margin-bottom: 40px ;
-} /*mauvaises finitions des boutons... ! */
+}
+
+input[type="checkbox"] {
+    display: none;
+}
 
 .button_filtre {
-    display: inline;
     border : 2px #f2f2f2 solid ;
-    border-radius: 20px;
-    padding-right: 20px;
-} /*attention décalage bas de la border, pas présent avant changements... ?*/
+    border-left: none;
+    border-radius: 27px;
+    padding-right: 20px ;
+    transition : 0.3s ;
+}
+
+span {
+    transition : 0.3s;
+}
 
 .button_filtre i {
     background-color: #DEEBFF;
     border : 1px #DEEBFF solid;
     border-radius: 50%;
-    padding : 12px;
-    margin-right : 10px ;
+    width : 50px ; height : 50px ;
+    text-align: center;
+    line-height: 3em;
+    margin-right : 5px ;
 }
 
-.button_filtre:hover {
+.button_filtre:hover, span:hover {
     background-color: #DEEBFF;
     color : #0065FC;
-}
-
-input[type="checkbox"] {
-    display: none;
+    cursor: pointer;
 }
 
 i[class="fas fa-info"] {
@@ -151,57 +194,69 @@ i[class="fas fa-info"] {
     margin-right: 10px;
 }
 
-                                    /* section hébergements */
+           /* section hébergements */
 
 i[class*="star"] {
-    color : #0065fc ;
-    font-size: 1em;
     letter-spacing: -2px;
 }
 
-i[class="far fa-star"] {
-    color : gray ;
-} /* pas réussi à les rendre entièrement grises. Essayé avec une class
-à l'intérieur du i, essayé avec un span autours du i. 
-Il y a bien une version grise sur font icon mais payante. */
+.four_stars i:last-child {
+    color: #c8c8c8;
+}
 
-#hebergements h1, #activites h1 {
-    font-size : 1.1em ;
+#three_stars :nth-child(4){
+    color : #c8c8c8 ;
 }
 
 #hebergements {
     display : flex;
     justify-content: space-between;
-    margin-bottom: 40px ;
+    margin-bottom: 65px ;
+}
+
+#hebergements h1  {
+    margin-bottom: 30px;
 }
 
 #hebergements article {
-    flex : 3;
-    height: 625px ;
+    display : flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    flex : 3 ;
     background-color: #f2f2f2 ;
     border : 1px #f2f2f2 solid;
     border-radius: 10px;
-    padding : 40px ;
-    margin-right: 40px ;
-} /* à 100% sur mon navigateur, les rectangles des hôtels se mettent
-sur deux colones et dépassent le container gris... ! */
+    padding :  20px 40px 40px 40px;
+    margin : 0 ; margin-right : 40px ;
+}
 
-#container_hebergements {
-    display :flex ;
-    flex-wrap: wrap;
+#container_hebergements_global {
+    min-height: 430px;
+    display: flex ;
+    flex-direction : column ;
     justify-content: space-between;
-    margin-top : 30px ; margin-bottom: 40px ;
+}
+
+#container_hebergements_top, #container_hebergements_bottom {
+    width : auto ;
+    display :flex ;
+    justify-content: space-between;
+    margin: 0 ; padding: 0;
 }
 
 .container_hotel {
     display: flex;
     position: relative;
-    width : 245px; height: 200px;
-    margin-bottom : 30px ;
+    width : 33%; height: 190px;
+    margin-right: 30px ;
     background-color: white;
     border : 3px white solid;
     border-radius: 10px;
     box-shadow: 1px 1px 7px #c8c8c8;
+}
+
+.container_hotel:last-child {
+    margin-right : 0 ;
 }
 
 .container_hotel img {
@@ -229,17 +284,16 @@ sur deux colones et dépassent le container gris... ! */
 }
 
 #afficher_plus {
-    font-size: 1em;
     font-weight: bold;
+    margin-top : 40px ;
 }
 
 aside {
-    flex : 1.3;
-    height: 625px ;
+    flex : 1.3 ;
     background-color: #f2f2f2 ;
     border : 1px #f2f2f2 solid;
     border-radius: 10px;
-    padding : 40px ;
+    padding : 20px 40px 40px 40px ;
 }
 
 #title_populaire {
@@ -249,16 +303,17 @@ aside {
 }
 
 #container_populaire {
+    min-height : 500px ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height : 510px ;
+    padding : 0 ; margin : 0 ;
 }
 
 .container_hotel_populaire {
     display: flex;
-    position: relative;
-    width : 345px; height: 145px;
+    position : relative ;
+    width : 100%; height: 135px;
     background-color: white;
     border : 3px white solid;
     border-radius: 10px;
@@ -286,7 +341,12 @@ aside {
 
 .caption_populaire p {
     font-size: 0.8em;
-    margin : 0px 45px 40px 15px ;
+    margin : 0px 45px 5px 15px ;
+}
+
+.caption_populaire p:last-of-type {
+    position : absolute ;
+    bottom : 0 ; left : 0 ;
 }
 
 i[class="fas fa-chart-line"] {
@@ -295,8 +355,8 @@ i[class="fas fa-chart-line"] {
     padding-right : 7px;
 }
 
+               /* section activités */
 
-                                        /* section activités */
 #activites {
     height: 510px ;
     margin-bottom : 40px ;
@@ -304,84 +364,85 @@ i[class="fas fa-chart-line"] {
 
 #contain_activites {
     display: flex ;
-    justify-content: space-between;
+    justify-content: space-between ;
+    padding :0 ;
 }  
 
 .row {
     display: flex;
     justify-content: space-between;
+    flex : 25% ;
+    margin-right : 30px ;
+}
+
+#contain_activites li:last-child {
+    margin-right : 0 ;
 }
 
 .column {
+    width : 100%; height : 445px ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height : 445px ;
-    flex : 25%;
-    max-width: 25%;
+}
+
+.xl, .l, .m, .s {
+    width : 100% ;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px #c8c8c8;
 }
 
 .xl {
-    display: flex;
-    position: relative;
-    width : 305px; height: 445px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px #c8c8c8;
+    height: 445px;
 }
 
 .l {
-    display: flex;
-    position: relative;
-    width : 305px; height: 240px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px #c8c8c8;
+    height: 240px;
 }
 
 .m {
-    display: flex;
-    position: relative;
-    width : 305px; height: 210px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px #c8c8c8;
+    height: 200px;
 }
 
 .s {
-    display: flex;
-    position: relative;
-    width : 305px; height: 165px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px #c8c8c8;
+    height: 165px;
 }
 
 #contain_activites img {
     width: 100% ; height: 85% ;
-    position : absolute ;
     object-fit: cover;
     box-sizing: border-box;
     border-radius: 10px 10px 0 0;
 }
 
 #contain_activites h3 {
-    position: absolute;
-    box-sizing: border-box;
-    bottom : 0 ;
     width : 100% ; height : 50px ;
-    padding-top : 25px ; padding-left : 20px ;
+    position: absolute;
+    bottom : 0 ; 
+    line-height: 4.5em ;
+    padding-left : 20px ;
     background-color: white;
+    box-sizing: border-box;
 }
 
-                                    /* footer */
+                /* footer */
 
 footer {
+    width :auto ;
     display: flex;
-    justify-content: space-between;
+    justify-content: center ;
     background-color: #F2F2F2;
-    padding: 45px ;
-    padding-right : 365px ;
+    padding : 45px 0 ;
 }
 
-ul {
-    list-style-type: none;
+footer div {
+    flex : 33% ;
+    max-width : 445px ;
+}
+
+footer ul {
     padding-left: 0;
 }
 
