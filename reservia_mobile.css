@@ -1,0 +1,170 @@
+#blocpage {
+    width : auto ;
+}
+
+/*note : manque de place pour certains textes dès 300px width */
+
+             /* header */
+
+ #desktop_header {
+    display: none;
+}
+
+#mobile_header {
+    display :flex ;
+    flex-direction : column ;
+}
+
+#mobile_header_top {
+    display: flex;
+    justify-content: space-between ;
+    margin : 0 20px ;
+}
+
+#mobile_header h2 {
+    margin : 0 ;
+}
+
+nav ul {
+    width : 100% ;
+    justify-content: space-around;
+    padding : 0 ;
+}
+
+nav li {
+    width : 50%;
+    border-bottom: 3px #f2f2f2 solid;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+nav li:hover {
+    border-top : none ;
+    border-bottom : 3px solid #0065FC ;
+}
+
+               /* form */
+
+form {
+    margin : 40px 20px ;
+}
+
+input[type="search"] {
+    width: 70%;
+}
+
+#rechercher {
+    display : none ;
+}
+
+#icon_search {
+    display : inline-block;
+    background-color: #0065FC;
+    color : white ;
+    border : 1px #0065fc solid ;
+    border-radius: 15px ;
+    width: 50px;
+    margin-left : -10px ;
+}
+
+i[class="fa fa-search"] {
+    color: white;
+    font-size: 1.2em;
+}
+
+#contain_filtres {
+    flex-wrap: wrap ;
+    width : auto ;
+    margin-bottom: 15px ;
+}
+
+form p:last-of-type{
+    width: 100%;
+}
+
+.button_filtre {
+    margin-bottom: 15px;
+}
+
+               /* section hébergements */
+
+#hebergements {
+    flex-direction: column-reverse;
+    margin-bottom : 40px;
+}
+
+#hebergements article {
+    width : auto ;
+    background-color: white ;
+    border : none ;
+    padding : 0 20px ;
+    margin-right: 0 ; margin-bottom: 0 ;
+}
+
+#container_hebergements_top, #container_hebergements_bottom {
+    flex-direction: column;
+}
+
+.container_hotel {
+    width : 100% ;
+    margin-bottom: 12px;
+}
+
+#afficher_plus {
+    margin-top : 30px ;
+}
+
+aside {
+    width : auto ;
+    border-radius: 0% ;
+    padding : 20px ;
+    margin-bottom: 20px ;
+}
+
+#container_populaire {
+    min-height : auto ;
+}
+
+.container_hotel_populaire {
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.caption_populaire h3, .caption_populaire p {
+    margin-right : 10px ;
+}
+
+               /* section activités */
+
+#activites {
+    height : auto ;
+    padding : 0 20px ;
+    margin-bottom : 30px ;
+}      
+            
+#contain_activites {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: column;
+    flex : 100% ;
+    margin-right : 0 ;
+}
+
+.column {
+    height : auto ;
+}
+
+.xl, .l, .m, .s {
+    height : 195px ;
+    margin-bottom : 20px;
+}
+
+                                    /* footer */
+
+footer {
+    width : auto ;
+    flex-direction: column;
+    padding : 45px 25px ;
+}
