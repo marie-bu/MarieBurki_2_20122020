@@ -20,19 +20,19 @@ body {
     }
 }
 
-h1 {
+h1, h2 {
     font-size: 1.3em;
     font-weight: bold;
 }
 
-h3 {
-    font-size : 1em ;
-    font-weight: bold;
-}
-
-h2, li a, p {
+h3, li a, p {
     font-size: 1em;
     font-weight : normal;
+}
+
+h4 {
+    font-size : 1em ;
+    font-weight: bold;
 }
 
 ul {
@@ -51,40 +51,45 @@ i {
 
              /* header */
 
-#mobile_header {
-    display: none;
-}
-                                                    
-#desktop_header_top {
-    display: flex;
-    justify-content: space-between ;
-}
-
-#desktop_header img {
-    width: 110px; height: 42px;
-    margin-top : 20px; margin-left : -10px ;
+#header_top {
+    display : flex ;
+    justify-content: right;
+    background-image: url("images/logo/Reservia.svg");
+    background-repeat: no-repeat;
+    background-position: 0px 35px;
+    padding : 15px 0 ;
 }
 
-#desktop_header h1 {
-    margin-top: 20px ;
+#inscription a {
+    color : #0065fc ;
+    font-weight: bold;
 }
 
-#desktop_header h2 {
+header h1 {
+    margin-top: 30px ;
+}
+
+header h3 {
     margin-top : 10px ; margin-bottom: 25px ;
 }
 
 nav ul {
-    display :flex ;
-    justify-content: space-between;
-    width: 440px;
+    display : flex ;
+    justify-content: space-around;
+    width : 340px ;
+    padding : 0 ; margin : 0
 }
 
-nav li {
+nav li, #inscription {
     padding : 57px 25px 0px 25px ;
     margin-top: -23px;
 }
 
-nav li:hover {
+#inscrition {
+    margin : 0 ;
+}
+
+nav li:hover, #inscription:hover {
     border-top: 1px #0065FC solid;
 }
 
@@ -97,10 +102,6 @@ nav a:hover {
     cursor : pointer ;
 }
 
-.inscription {
-    color : #0065fc ;
-    font-weight: bold; 
-}
 
            /* form */
 
@@ -167,9 +168,7 @@ input[type="checkbox"] {
     transition : 0.3s ;
 }
 
-span {
-    transition : 0.3s;
-}
+
 
 .button_filtre i {
     background-color: #DEEBFF;
@@ -214,7 +213,7 @@ i[class*="star"] {
     margin-bottom: 65px ;
 }
 
-#hebergements h1  {
+#hebergements h2  {
     margin-bottom: 30px;
 }
 
@@ -273,7 +272,7 @@ i[class*="star"] {
     width : 100% ; height : 35% ;
 }
 
-.caption_hotel h3 {
+.caption_hotel h4 {
     font-size : 0.9em ;
     margin : 5px 0 5px 12px;
 }
@@ -334,7 +333,7 @@ aside {
     width : 60% ; height : 100% ;
 }
 
-.caption_populaire h3 {
+.caption_populaire h4 {
     font-size : 0.9em;
     margin : 15px 45px 12px 15px ;
 }
@@ -417,7 +416,7 @@ i[class="fas fa-chart-line"] {
     border-radius: 10px 10px 0 0;
 }
 
-#contain_activites h3 {
+#contain_activites h4 {
     width : 100% ; height : 50px ;
     position: absolute;
     bottom : 0 ; 

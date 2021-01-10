@@ -6,29 +6,22 @@
 
              /* header */
 
- #desktop_header {
-    display: none;
+
+#header_top {
+    flex-direction: column-reverse;
+    padding : 0 ;
+    background-position: 20px 20px ;
 }
 
-#mobile_header {
-    display :flex ;
-    flex-direction : column ;
-}
-
-#mobile_header_top {
-    display: flex;
-    justify-content: space-between ;
-    margin : 0 20px ;
-}
-
-#mobile_header h2 {
-    margin : 0 ;
+#inscription {
+    text-align: right;
 }
 
 nav ul {
     width : 100% ;
     justify-content: space-around;
     padding : 0 ;
+    margin-top : 15px ;
 }
 
 nav li {
@@ -42,6 +35,11 @@ nav li:hover {
     border-top : none ;
     border-bottom : 3px solid #0065FC ;
 }
+
+header h1, header h3 {
+    margin-left : 20px ; margin-right : 20px ;
+}
+
 
                /* form */
 
@@ -134,7 +132,7 @@ aside {
     margin-bottom: 12px;
 }
 
-.caption_populaire h3, .caption_populaire p {
+.caption_populaire h4, .caption_populaire p {
     margin-right : 10px ;
 }
 
